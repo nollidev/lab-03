@@ -31,6 +31,7 @@ class MainActivity : ComponentActivity() {
                     CityListScreen(
                         cities = cityRepository.cities,
                         onAddCity = { cityRepository.addCity(it) },
+                        onUpdateCity = { initCity: City, updateCity: City -> cityRepository.editCity(initCity, updateCity) },
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
